@@ -60,6 +60,7 @@
 export default {
   name: "HelloWorld" ,
   data() {
+    console.dir();
     return {
       msg: 'Welcome to Your Vue.js App',
     };

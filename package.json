@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -84,6 +85,7 @@
   "lint-staged": {
     "src/**/*.{js,vue}": [
       "eslint --fix",
+      "prettier --write",
       "git add"
     ]
   }
